@@ -8,7 +8,6 @@ from discord.ext import commands
 from discord import embeds
 class Time:
 	def __init__(self, bot):
-
 		@commands.command()
 		async def time(self, message):
 			if ctx.invoked_subcommand is None:
