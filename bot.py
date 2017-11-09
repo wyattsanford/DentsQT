@@ -28,6 +28,17 @@ bot = commands.Bot(command_prefix='d.', description=description)
 
 print(discord.__version__)
 
+initial_cogs = (
+	'cogs.time',
+)
+
+for cog in initial_cogs:
+	try:
+		self.load_extension(cog)
+	except Exception as e:
+		print('Failed to load cog {}'.format(cog), file=sys.stderr)
+		traceback.prent_exc()
+
 @bot.event
 async def on_ready():
 	print('Logged in as')
