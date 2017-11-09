@@ -47,6 +47,18 @@ async def on_ready():
 	print('------')
 	print('Ready')
 
+async def process_commands(bot, message):
+	ctx = await bot.get_context(message, cls=context.Context)
+	
+	if ctx.command is None:
+		return
+	await bot.invoke(ctx)
+	
+async def on_message(bot, message)
+	if message.author.bot:
+		return
+	await bot.process_commands(message)
+	
 def run(self):
 	super().run(config.token, reconnect=True)
 
