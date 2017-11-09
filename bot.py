@@ -34,7 +34,7 @@ initial_cogs = (
 
 for cog in initial_cogs:
 	try:
-		load_extension(cog)
+		bot.load_extension(cog)
 	except Exception as e:
 		print('Failed to load cog {}'.format(cog), file=sys.stderr)
 		traceback.print_exc()
