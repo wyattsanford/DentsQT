@@ -8,7 +8,7 @@ from discord.ext import commands
 from discord import embeds
 
 @commands.group(pass_context=True)
-async def time(self, ctx)
+async def time(self)
   if ctx.invoked_subcommand is None:
     async with ctx.typing():
       await asyncio.sleep(.5)
