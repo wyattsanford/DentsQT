@@ -53,7 +53,8 @@ async def process_commands(bot, message):
 	if ctx.command is None:
 		return
 	await bot.invoke(ctx)
-	
+
+@bot.event()	
 async def on_message(message)
 	if message.author.bot:
 		return
