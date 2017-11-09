@@ -53,14 +53,9 @@ async def process_commands(bot, message):
 	if ctx.command is None:
 		return
 	await bot.invoke(ctx)
-<<<<<<< HEAD
 
 @bot.event()	
-async def on_message(message)
-=======
-	
 async def on_message(message):
->>>>>>> f1b908b8dcf44360a8b6a092067b90ee655b5a29
 	if message.author.bot:
 		return
 	await bot.process_commands(message)
