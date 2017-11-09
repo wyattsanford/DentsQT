@@ -15,4 +15,4 @@ async def time(self, ctx):
       return await bot.say(embed=embeds.Embed(title='Current Eve Time:', description=pendulum.utcnow().to_datetime_string()))
 
 def setup(bot):
-  bot.add_cog(Time(bot))
+  bot.add_cog(time(bot))
