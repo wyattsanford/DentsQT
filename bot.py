@@ -1,16 +1,15 @@
-import sys
 import logging
+import sys
 import traceback
-import discord
-import click
-import aioredis
+
 import aiohttp
-import asyncio
-import random
+import aioredis
+import pendulum
 from discord.ext import commands
 from discord.ext.commands import Bot
-#from cogs.utils import context
-#from cogs.utils.esi import ESI
+import discord
+import random
+
 
 try:
 	import uvloop
@@ -33,9 +32,6 @@ bot = commands.Bot(command_prefix='d.', description=description)
 #)
 print(discord.__version__)
 bot.run(config.token)
-bot.add_command(roll)
-# print('runtime checkpoint1')
-
 #def __init__(self):
 #	super().__init__(
 #		command_prefix='d.',
@@ -69,10 +65,6 @@ async def on_ready():
 
 def run(self):
 	super().run(token, reconnect=True)
-
-#@property
-#def config(self):
-#	return __import('config')
 
 @bot.command()
 async def roll(dice : str):
