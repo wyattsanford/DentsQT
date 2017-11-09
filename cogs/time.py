@@ -12,4 +12,4 @@ async def time(self, ctx):
   if ctx.invoked_subcommand is None:
     async with ctx.typing():
       await asyncio.sleep(.5)
-      return await bot.say(embed=embeds.Embed(title='Current Eve Time:', description=pendulum.utcnow().to_datetime_string())
+      return await bot.say(embed=embeds.Embed(title='Current Eve Time:', description=pendulum.utcnow().to_datetime_string()))
