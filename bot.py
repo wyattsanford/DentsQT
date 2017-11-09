@@ -8,7 +8,7 @@ import aiohttp
 import asyncio
 import random
 from discord.ext import commands
-
+from discord.ext.commands import Bot
 #from cogs.utils import context
 #from cogs.utils.esi import ESI
 
