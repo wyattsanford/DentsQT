@@ -37,18 +37,18 @@ async def on_ready():
 	print('Ready')
 
 def run(self):
-	super().run(token, reconnect=True)
+	super().run(config.token, reconnect=True)
 
-@bot.command()
-async def roll(dice : str):
+@bot.command(pass_context=True)
+async def roll(ctx, dice : str):
 	"""Rolls a dice, format = NdN"""
 	try:
 		rolls, limit = map(int, dice.split('d'))
 	except Exception:
-		await bot.say('Format must be NdN')
+		await ctx.send('Format must be NdN')
 		return
 	
-	result = ', '.join(str(randint(1, limit)) for r in range(rolls))
-	await bot.say(result)
+	result = ', '.join(str(random.randint(1, limit)) for r in range(rolls))
+	await ctx.send(result)
 	
 bot.run(config.token)
