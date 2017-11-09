@@ -27,7 +27,6 @@ description = """This is a barebones bot to learn discord.py"""
 bot = commands.Bot(command_prefix='d.', description=description)
 
 print(discord.__version__)
-bot.run(config.token)
 
 @bot.event
 async def on_ready():
@@ -51,3 +50,5 @@ async def roll(dice : str):
 	
 	result = ', '.join(str(randint(1, limit)) for r in range(rolls))
 	await bot.say(result)
+	
+bot.run(config.token)
