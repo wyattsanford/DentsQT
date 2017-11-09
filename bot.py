@@ -37,7 +37,7 @@ for cog in initial_cogs:
 		self.load_extension(cog)
 	except Exception as e:
 		print('Failed to load cog {}'.format(cog), file=sys.stderr)
-		traceback.parent_exc()
+		traceback.print_exc()
 
 @bot.event
 async def on_ready():
