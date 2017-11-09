@@ -1,4 +1,3 @@
-import logging
 import sys
 import traceback
 
@@ -27,21 +26,8 @@ except ImportError:
 description = """This is a barebones bot to learn discord.py"""
 bot = commands.Bot(command_prefix='d.', description=description)
 
-# initial.cogs = (
-#	'cogs.time',
-#)
 print(discord.__version__)
 bot.run(config.token)
-#def __init__(self):
-#	super().__init__(
-#		command_prefix='d.',
-#		description=description,
-#		pm_help=None,
-#		help_attrs=dict(hidden=True))
-#
-#	self.client_id = config.client_id
-#	self.token = config.token
-#	self.session = aiohttp.ClientSession(loop=self.loop)
 
 @bot.event
 async def on_ready():
@@ -50,18 +36,6 @@ async def on_ready():
 	print(bot.user.id)
 	print('------')
 	print('Ready')
-#@bot.event
-#async def on_message(self, message):
-#	if message.author.bot:
-#		return
-#	await self.process_commands(message)
-#
-#async def process_commands(self, message):
-#	ctx = await self.get_context(message, cls=context.Context)
-#
-#	if ctx.command is None:
-#		return
-#	await self.invoke(ctx)
 
 def run(self):
 	super().run(token, reconnect=True)
