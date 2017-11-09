@@ -8,7 +8,7 @@ from discord.ext import commands
 from discord import embeds
 class Time:
 	def __init__(self, bot):
-		self.bot = bot
+		bot = self.bot
 
 	@commands.command(pass_context=True)
 	async def time(self, message):
