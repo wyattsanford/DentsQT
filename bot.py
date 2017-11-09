@@ -54,7 +54,7 @@ async def process_commands(bot, message):
 		return
 	await bot.invoke(ctx)
 
-@bot.event()	
+@bot.event
 async def on_message(message):
 	if message.author.bot:
 		return
