@@ -28,7 +28,7 @@ class Time:
     async def pst(self):
         await asyncio.sleep(.5)
         return await self.bot.say(embed=embeds.Embed(title='Current USTZ (West Coast:)',
-                                                     descrpition=pendulum.now(tz='PST').to_datetime_string()))
+                                                     descrpition=pendulum.now(tz='US/Pacific').to_datetime_string()))
 
 
 def setup(bot):
