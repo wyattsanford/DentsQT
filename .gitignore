@@ -102,4 +102,7 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+.idea\vcs.xml
+.idea\workspace.xml
 >>>>>>> d102e44078218382432d364d611e8f466af28d9b
