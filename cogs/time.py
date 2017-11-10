@@ -22,9 +22,9 @@ class Time:
             embed=embeds.Embed(title='Current Eve Time:', description=pendulum.utcnow().to_datetime_string()))
 
     @time.command(pass_context=True)
-        async def uswest(self, ctx):
-            await asyncio.sleep(.5)
-            return self.bot.say(embed=embeds.Embed(title='Current USTZ (West Coast:)',
+    async def uswest(self, ctx):
+        await asyncio.sleep(.5)
+        return self.bot.say(embed=embeds.Embed(title='Current USTZ (West Coast:)',
                                                      descrpition=pendulum.timezone('US/Pacific').to_datetime_string()))
 
 
