@@ -31,4 +31,4 @@ class Time:
                                                      descrpition=pendulum.now(tz='US/Pacific').tz)
 
 def setup(bot):
-    bot.add_cog(Time(bot))
+            bot.add_cog(Time(bot))
