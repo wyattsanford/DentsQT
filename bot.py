@@ -75,5 +75,9 @@ async def roll(dice : str):
 	
 	result = ', '.join(str(random.randint(1, limit)) for r in range(rolls))
 	await bot.say(result)
+
+@bot.command()
+async def shutdown()
+	sys.exit('Thx for fleet, Tau!')
 	
 bot.run(config.token)
