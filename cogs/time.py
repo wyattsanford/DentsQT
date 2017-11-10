@@ -30,6 +30,5 @@ class Time:
         return await self.bot.say(embed=embeds.Embed(title='Current USTZ (West Coast):',
                                                      descrpition=pendulum.now(tz='US/Pacific').tz)
 
-
 def setup(bot):
     bot.add_cog(Time(bot))
