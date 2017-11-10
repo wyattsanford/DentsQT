@@ -13,7 +13,7 @@ class Time:
         self.bot = bot
 
     @commands.group(pass_context=True)
-    async def time(self, message):
+    async def time(self, ctx):
         #		if ctx.invoked_subcommand is None:
         #		async with ctx.typing():
         if ctx.invoked_subcommand is None:
