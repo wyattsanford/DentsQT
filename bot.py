@@ -79,6 +79,6 @@ async def roll(dice : str):
 @bot.command()
 async def shutdown():
 	bot.say('Thx for fleet, Tau!')
-	sys.exit('Thx for fleet, Tau!')
+	quit('Thx for fleet, Tau!')
 
 bot.run(config.token)
