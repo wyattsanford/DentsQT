@@ -22,12 +22,7 @@ class Time:
     @time.command(pass_context=True)
     async def pst(self, ctx):
         await asyncio.sleep(.5)
-
-        tz = pendulum.timezone('US/Pacific')
-        now_in_pst = pendulum.now(tz)
-        converted_pst = now_in_pst.to_datetime_string()
-
-        return await self.bot.say(embed=embeds.Embed(title='Current USTZ (West Coast):', description=converted_pst))
+        return await self.bot.say(embed=embeds.Embed(title='Current USTZ (West Coast):', description=pendulum.now('US/Pacific').to_datetime_string()))
 
 
 def setup(bot):
