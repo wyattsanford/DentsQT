@@ -19,8 +19,11 @@ class Time:
         await asyncio.sleep(.5)
         return await self.bot.say(
             embed=embeds.Embed(title='Current Eve Time:', description=pendulum.utcnow().to_datetime_string()))
-#        return await self.bot.say(embed=embeds.Embed(title='Current USTZ (West Coast:',
-#                                                     descrpition=pendulum.timezone('US/Pacific').to_datetime_string()))
+
+    @time.command()
+    async def pst(self):
+        await asyncio.sleep(.5)
+        return await self.bot.say(embed=embeds.Embed(title='Current USTZ (West Coast):', descrpition=pendulum.timezone('US/Pacific').to_datetime_string()))
 
 
 def setup(bot):
