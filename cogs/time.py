@@ -16,7 +16,7 @@ class Time:
     async def time(self, ctx):
         if ctx.invoked_subcommand is None:
             await asyncio.sleep(.5)
-            return await self.bot.say(embed=embeds.Embed(title='Current Eve Time:', description=pendulum.utcnow().to_datetime_string()))
+            return await self.bot.say(embed=embeds.Embed(title='Current EVE Time:', description=pendulum.utcnow().to_datetime_string()))
 
     @time.command(pass_context=True)
     async def pst(self, ctx):
