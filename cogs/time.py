@@ -20,7 +20,7 @@ class Time:
                 return await self.bot.say(embed=embeds.Embed(title='Current Eve Time:', description=pendulum.utcnow().to_datetime_string()))
 
     @time.command(pass_context=True)
-    async def pst(self, ctx, *, time):
+    async def pst(self, ctx):
         await asyncio.sleep(.5)
 
         tz = pendulum.timezone('US/Pacific')
