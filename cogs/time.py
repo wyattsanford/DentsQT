@@ -25,8 +25,10 @@ class Time:
 
         tz = pendulum.timezone('US/Pacific')
         now_in_pst = pendulum.now(tz)
+        
+        converted_pst = now_in_pst.to_datetime_string()
 
-        return await self.bot.say(embed=embeds.Embed(title='Current USTZ (West Coast):', descrpition=now_in_pst.to_datetime_string()))
+        return await self.bot.say(embed=embeds.Embed(title='Current USTZ (West Coast):', descrpition=converted_pst))
 
 
 def setup(bot):
