@@ -19,7 +19,7 @@ class Time:
                 await asyncio.sleep(.5)
                 return await self.bot.say(embed=embeds.Embed(title='Current Eve Time:', description=pendulum.utcnow().to_datetime_string()))
 
-    @time.command()
+    @time.command(pass_context=True)
     async def pst(self, ctx):
         async with ctx.typing():
             await asyncio.sleep(.5)
