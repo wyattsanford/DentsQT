@@ -13,12 +13,11 @@ class Time:
         self.bot = bot
 
     @commands.command(pass_context=True)
-
-        async def time(self, message):
-            if ctx.invoked_subcommand is None:
-                async with ctx.typing():
-                    await asyncio.sleep(.5)
-                    return await self.bot.say(embed=embeds.Embed(title='Current Eve Time:', description=pendulum.utcnow().to_datetime_string()))
+    async def time(self, message):
+        if ctx.invoked_subcommand is None:
+            async with ctx.typing():
+                await asyncio.sleep(.5)
+                return await self.bot.say(embed=embeds.Embed(title='Current Eve Time:', description=pendulum.utcnow().to_datetime_string()))
 
     @time.command()
     async def pst(self, message):
