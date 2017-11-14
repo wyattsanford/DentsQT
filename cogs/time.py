@@ -35,7 +35,7 @@ class Time:
 
         print(converted_pst)
 
-        return await self.bot.say(embed=embeds.Embed(title='Current USTZ (West Coast):', descrpition=converted_pst))
+        return await self.bot.say(embed=embeds.Embed(title='Current USTZ (West Coast):', description=converted_pst))
 
 
 def setup(bot):
