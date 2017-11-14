@@ -32,8 +32,8 @@ initial_cogs = (
     'cogs.time',
 )
 
-bot.add_command(bot.uptime)
-#bot.add_command(bot.join_server)
+# bot.add_command(self.uptime)
+# bot.add_command(bot.join_server)
 
 for cog in initial_cogs:
     try:
@@ -85,12 +85,12 @@ async def roll(dice: str):
     await bot.say(result)
 
 
-@bot.command(hidden=True)
-async def uptime(self, ctx):
-    """
-        Returns bot uptime
-        """
-    await ctx.send(pendulum.now(tz='UTC').diff_for_humans(bot.currentuptime, absolute=True))
+#@bot.command(hidden=True)
+#async def uptime(self, ctx):
+#    """
+#        Returns bot uptime
+#        """
+#    await ctx.send(pendulum.now(tz='UTC').diff_for_humans(bot.currentuptime, absolute=True))
 
 
 @bot.command()
