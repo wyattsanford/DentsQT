@@ -24,16 +24,8 @@ class Time:
         await asyncio.sleep(.5)
 
         tz = pendulum.timezone('US/Pacific')
-
-        print(tz)
-
         now_in_pst = pendulum.now(tz)
-
-        print(now_in_pst)
-
         converted_pst = now_in_pst.to_datetime_string()
-
-        print(converted_pst)
 
         return await self.bot.say(embed=embeds.Embed(title='Current USTZ (West Coast):', description=converted_pst))
 
